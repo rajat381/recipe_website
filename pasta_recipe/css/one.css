@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@700&family=Fira+Code&display=swap');
+
+:root {
+    --primary-olive: #4A5C2A;
+    --accent-terra: #C8621F;
+    --bg-light: #FAF7F0;
+    --card-white: #FFFDF8;
+    --text-dark: #333333;
+    --text-muted: #666666;
+    --nav-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: var(--primary-olive);
+    box-shadow: var(--nav-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav-links {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2.5rem;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-terra);
+}
+
+.nav-cta {
+    padding: 0.6rem 1.8rem;
+    background-color: var(--accent-terra);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 1px 2px black;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.nav-cta:hover {
+    box-shadow: 1px 8px rgb(15, 15, 15);
+    background-color: #a84e18;
+    transform: translateY(-5px);
+}
+
+.main {
+    background-color: var(--bg-light);
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.banner {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #EAE4C0;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--primary-olive);
+    line-height: 1.6;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    height: auto;
+    margin: 15px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+    background-color: var(--card-white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding-bottom: 25px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    background-color: #f0f0f0;
+}
+
+.card .info {
+    margin-top: 20px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+.names {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-olive);
+}
+
+.card .info .types {
+    margin-top: 15px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.con {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.read_more {
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
+.read_more a {
+    color: var(--primary-olive);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.read_more a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
